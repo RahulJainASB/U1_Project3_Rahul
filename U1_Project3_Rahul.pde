@@ -16,14 +16,10 @@ Hedgehog hedgehog         = new Hedgehog();
 boolean gameOver              = false;
 */
 
-Frame frame = new Frame();
-
-
-Bat bat = new Bat();
-
-Player player = new Player();
-
-Brick_Manager brickManager = new Brick_Manager();
+Frame frame;
+Bat bat;
+Player player;
+Brick_Manager brickManager;
 
 
 void setup()
@@ -31,7 +27,12 @@ void setup()
   fullScreen();
   background(124);
   
-  brickManager.initialize();
+ frame = new Frame();
+  bat = new Bat();
+  player = new Player();
+
+  brickManager = new Brick_Manager();
+  //brickManager.initialize();
 
 }
 
@@ -40,7 +41,7 @@ void draw()
   frame.draw();
   bat.draw();
   player.draw();
-  brickManager.draw();
+ // brickManager.draw();
   
   
   /*

@@ -1,13 +1,14 @@
 class Brick_Manager
 {
-  int             numberOfBrickLines;
-  Brick_Line[]    brickLine;
+//  int             numberOfBrickLines;
   int             maxNumberOfBrickLines;
+  Brick_Line[]    brickLine;
+
 
   // This is the constructer to build the brick
   Brick_Manager()
   {
-    numberOfBrickLines = 1;
+    //numberOfBrickLines = 1;
     maxNumberOfBrickLines = 5;
     brickLine = new Brick_Line[maxNumberOfBrickLines];
   }

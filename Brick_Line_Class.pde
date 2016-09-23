@@ -10,9 +10,11 @@ class Brick_Line
   // This is the constructer to build the brick
   Brick_Line()
   {
-    maxNumberOfBricks = 30;
-    bricks = new Brick[maxNumberOfBricks];
-    amIVisible = false;
+    maxNumberOfBricks  = 30;
+    amIVisible         = false;
+    x                  = 100;
+    y                  = 200;
+    bricks             = new Brick[maxNumberOfBricks];
   }
   
  

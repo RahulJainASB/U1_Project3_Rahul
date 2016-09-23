@@ -11,8 +11,8 @@ class Brick
   // This is the constructer to build the brick
   Brick()
   {
-    x               = 500;
-    y               = 800;
+    x               = 100;
+    y               = 200;
     brickWidth      = 150;
     brickHeight     = 25;
   }
