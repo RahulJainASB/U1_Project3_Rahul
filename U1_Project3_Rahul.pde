@@ -21,6 +21,11 @@ Frame frame = new Frame();
 
 Bat bat = new Bat();
 
+Player player = new Player();
+
+Brick_Manager brickManager = new Brick_Manager();
+
+
 void setup()
 {
   fullScreen();
@@ -32,6 +37,8 @@ void draw()
 {
   frame.draw();
   bat.draw();
+  player.draw();
+  brickManager.draw();
   
   
   /*
@@ -94,16 +101,4 @@ void displayInstructions()
    text("If you go too close to the trees, you will be poisned and lose.",   (width/10), (height/2));
    text("Use the left and right arrow keys to move.",                        (width/10), (height/2) + 50);
    text("Press enter to begin the game.",                                    (width/10), (height/2) + 100);
-}
-
-
-// Show the user's score and level
-void showScore()
-{
-  fill(255);
-  textSize(14);
-  text("Level: ",  width-280, 150);
-  //text (level,     width-230, 150);
-  text("Score: " , width-280, 180);
-  //text (score,     width-230, 180);
 }

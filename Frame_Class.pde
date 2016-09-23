@@ -20,6 +20,5 @@ class Frame
     fullScreen();
     fill(0);
     rect(x, y, width-20, height-110); //<>//
-    
   }
 }

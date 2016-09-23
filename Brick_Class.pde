@@ -22,3 +22,4 @@ class Brick
   fill(180);
   rect(100, 100, brickWidth, brickHeight);
   }
+}
