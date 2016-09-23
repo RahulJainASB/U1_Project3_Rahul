@@ -28,11 +28,13 @@ void setup()
   background(124);
   
  frame = new Frame();
+ frame.initialize();
+ 
   bat = new Bat();
   player = new Player();
 
   brickManager = new Brick_Manager();
-  //brickManager.initialize();
+  brickManager.initialize();
 
 }
 

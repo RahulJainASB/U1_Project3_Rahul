@@ -10,7 +10,7 @@ class Brick_Line
   // This is the constructer to build the brick
   Brick_Line()
   {
-    maxNumberOfBricks  = 30;
+    maxNumberOfBricks  = 5; //30;
     amIVisible         = false;
     x                  = 100;
     y                  = 200;
@@ -32,10 +32,11 @@ class Brick_Line
   
   void setPosition(float xPos, float yPos)
   {
+    println("Inside setPosition");
     x = xPos;
     y = yPos;
     
-   setBricksPositions();
+//   setBricksPositions();
 
   }
   
@@ -46,10 +47,16 @@ class Brick_Line
     int brickWidth = frame.getFrameWidth()/maxNumberOfBricks;
     int brickHeight = 100;
 
+
     for( int i = 0; i < maxNumberOfBricks; i++)
     {
       float brickX =  x + (i*brickWidth) + 2;
-      bricks[i].setBrickPosition(brickX, brickY, brickWidth, brickHeight);
+      println(brickX);
+      
+      println("Brick# ", i, " X = ", brickX, " Y = ", brickY, " width=  ", brickWidth, " height=", brickHeight);
+
+      
+      //bricks[i].setBrickPosition(brickX, brickY, brickWidth, brickHeight);
     }
   }
 }

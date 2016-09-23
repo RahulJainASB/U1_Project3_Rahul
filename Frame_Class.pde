@@ -21,16 +21,26 @@ class Frame
   
   void draw()
   {
-    fullScreen();
     fill(0);
-    frameWidth = width-20;
-    frameHeight = height-110;    
     rect(x, y, frameWidth, frameHeight); //<>//
   }
+  
+  void initialize()
+  {
+    fullScreen();
+    frameWidth = width-20;
+    frameHeight = height-110;    
+  }
+  
   int getFrameWidth()
   {
     return frameWidth;
   }
+  int getFrameHeight()
+  {
+    return frameHeight;
+  }
+
   float getFrameX()
   {
     return x;

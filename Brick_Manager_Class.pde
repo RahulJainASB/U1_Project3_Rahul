@@ -9,8 +9,8 @@ class Brick_Manager
   Brick_Manager()
   {
     //numberOfBrickLines = 1;
-    maxNumberOfBrickLines = 5;
-    brickLine = new Brick_Line[maxNumberOfBrickLines];
+    maxNumberOfBrickLines = 1; //5;
+    brickLine = new Brick_Line[1];//maxNumberOfBrickLines];
   }
   
   void initialize()
@@ -30,12 +30,21 @@ class Brick_Manager
 
 void setBrickLinePosition()
 {
-    float  frameX = frame.getFrameX();
-    float  frameY = frame.getFrameY();
+    float  brickLineX = frame.getFrameX() + 10;
+    
+    float frameY     = frame.getFrameY();
+    float brickLineY = frameY;
+
+    println(brickLineX);
+    println(brickLineY);
+    println(frame.getFrameWidth());
+    println(frame.getFrameHeight());
     
     for (int i = 0; i < maxNumberOfBrickLines; i++)
     {
-      brickLine[i].setPosition(frameX,  frameY + (i * 100));
+      brickLineY = frameY + (i * 100);
+      println("BrickLine #: ", i, "  X = ", brickLineX, " Y = ", brickLineY);
+      brickLine[i].setPosition(brickLineX,  brickLineY); // This programm is stoping at this line.
     }
 }
 
