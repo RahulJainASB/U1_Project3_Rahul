@@ -19,7 +19,14 @@ class Brick
   
   void draw()
   {
-  fill(180);
-  rect(100, 100, brickWidth, brickHeight);
+  rect(x, y, brickWidth, brickHeight);
+  }
+  
+  void setBrickPosition(float xPos, float yPos, int w, int h)
+  {
+    x = xPos;
+    y = yPos;
+    brickWidth = w;
+    brickHeight = h;
   }
 }

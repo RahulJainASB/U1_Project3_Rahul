@@ -5,6 +5,8 @@ class Frame
 {
   float x;
   float y;
+  int frameWidth;
+  int frameHeight;
 
   
   
@@ -12,13 +14,30 @@ class Frame
   Frame()
   {
     x          = 10;
-    y          = 100; //<>//
+    y          = 100;
+    frameWidth = 100;
+    frameHeight = 100; //<>//
   }
   
   void draw()
   {
     fullScreen();
     fill(0);
-    rect(x, y, width-20, height-110); //<>//
+    frameWidth = width-20;
+    frameHeight = height-110;    
+    rect(x, y, frameWidth, frameHeight); //<>//
   }
+  int getFrameWidth()
+  {
+    return frameWidth;
+  }
+  float getFrameX()
+  {
+    return x;
+  }
+  float getFrameY()
+  {
+    return y;
+  }
+  
 }

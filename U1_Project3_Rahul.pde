@@ -30,6 +30,8 @@ void setup()
 {
   fullScreen();
   background(124);
+  
+  brickManager.initialize();
 
 }
 
