@@ -14,7 +14,7 @@ class Player
     level     = 1;
     lives     = 3;
   }
-  
+
   void draw()
   {
     // Show the user's score and level
@@ -26,7 +26,6 @@ class Player
     text("Score: ", width-280, 50);
     text (score, width-230, 50);
     //text("Lives: ", width-280, 75);
-   // text (lives, width-230, 75);
+    // text (lives, width-230, 75);
   }
-
 }

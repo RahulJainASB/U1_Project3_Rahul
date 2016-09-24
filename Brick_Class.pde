@@ -46,49 +46,42 @@ class Brick
     {
       return collide;
     }
-    
-    
-    int sideCollided = ball.rectCollision( x, y,  (x+ brickWidth),  (y + brickHeight) );
 
-    if( sideCollided == 0 )
+
+    int sideCollided = ball.rectCollision( x, y, (x+ brickWidth), (y + brickHeight) );
+
+    if ( sideCollided == 0 )
     {
       return false;
-    }
-    else if( sideCollided == 1 )
+    } else if ( sideCollided == 1 )
     {
       ball.xDirection = -ball.xDirection;
-    }
-    else if( sideCollided == 2 )
+    } else if ( sideCollided == 2 )
+    {
+      ball.yDirection = -ball.yDirection;
+    } else if ( sideCollided == 3 )
+    {
+      ball.xDirection = -ball.xDirection;
+    } else if ( sideCollided == 4 )
     {
       ball.yDirection = -ball.yDirection;
     }
-    else if( sideCollided == 3 )
-    {
-      ball.xDirection = -ball.xDirection;
-    }
-    else if( sideCollided == 4 )
-    {
-      ball.yDirection = -ball.yDirection;
-    }
-    
-      collide = true;
-      counter--;        // this brick has been hit. Count the hit.
-      player.score++;   // Increment player score.  
+
+    collide = true;
+    counter--;        // this brick has been hit. Count the hit.
+    player.score++;   // Increment player score.  
     return collide;
   }
 
-// Returns true if this brick is visible, if not, false
+  // Returns true if this brick is visible, if not, false
   boolean amIVisible()
   {
     if ( counter == 0 )
     {
       return false;
-    }
-    else 
+    } else 
     {
       return true;
     }
   }
-  
-  
 } //end of class

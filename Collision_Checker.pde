@@ -15,12 +15,10 @@ class Collision_Checker
     if ( checkWallCollisions() == true)
     {
       collide = true;
-    }
-    else if ( CheckBrickCollision() == true)
+    } else if ( CheckBrickCollision() == true)
     {
       collide = true;
-    }
-    else if ( checkBatCollision() == true)
+    } else if ( checkBatCollision() == true)
     {
       collide = true;
     }
@@ -43,13 +41,11 @@ class Collision_Checker
     {
       ball.xDirection = -ball.xDirection;
       collide = true;
-    }
-    else if ( (ballY - wallTopY) < r )  // checking collision with top wall
+    } else if ( (ballY - wallTopY) < r )  // checking collision with top wall
     {
       ball.yDirection = -ball.yDirection;
       collide = true;
-    }
-    else if ( (wallBottomY - ballY) < r)  // checking collision with bottom wall i.e. the ball did not hit the bat and fell down
+    } else if ( (wallBottomY - ballY) < r)  // checking collision with bottom wall i.e. the ball did not hit the bat and fell down
     {
       player.lives--;
       resetGame();
@@ -57,10 +53,10 @@ class Collision_Checker
     return collide;
   }
 
-boolean CheckBrickCollision()
+  boolean CheckBrickCollision()
   {
-     boolean collide = false;
-     collide = brickManager.checkBallCollision();
+    boolean collide = false;
+    collide = brickManager.checkBallCollision();
     return collide;
   }
 
@@ -74,37 +70,30 @@ boolean CheckBrickCollision()
     int r               = ball.getRadius();
     float ballX         = ball.getX();
     float ballY         = ball.getY();
-    
-    
-    int sideCollided = ball.rectCollision( bat.getTopLeftX(), bat.getTopLeftY(),  bat.getBottomRightX(),  bat.getBottomRightY() );
 
-    if( sideCollided == 0 )
+
+    int sideCollided = ball.rectCollision( bat.getTopLeftX(), bat.getTopLeftY(), bat.getBottomRightX(), bat.getBottomRightY() );
+
+    if ( sideCollided == 0 )
     {
       return false;
-    }
-    else if( sideCollided == 1 )
+    } else if ( sideCollided == 1 )
     {
       ball.xDirection = -ball.xDirection;
       //println("Left of bat");
-    }
-    else if( sideCollided == 2 )
+    } else if ( sideCollided == 2 )
     {
       ball.yDirection = -ball.yDirection;
       //println("Top of bat");
-    }
-    else if( sideCollided == 3 )
+    } else if ( sideCollided == 3 )
     {
       ball.xDirection = -ball.xDirection;
       //println("Right of bat");
-    }
-    else if( sideCollided == 4 )
+    } else if ( sideCollided == 4 )
     {
       ball.yDirection = -ball.yDirection;
       //println("Bottom of bat");
     }
     return true;
   }
-  
-  
-  
 } // end of class

@@ -24,12 +24,11 @@ class Bat
     // Check if bat is off the screen before drawing
     float wallLeftX     = frame.getLeftX();
     float wallRightX    = frame.getRightX(); 
-    
+
     if (  (wallRightX - x) < (batWidth/5) )   // Bat is too far to the right, move it to left side
     {
       x = wallLeftX;
-    }
-    else if( ((x + batWidth) - wallLeftX) < (batWidth/5) )  // Bat is too far to the left side, move it to the right
+    } else if ( ((x + batWidth) - wallLeftX) < (batWidth/5) )  // Bat is too far to the left side, move it to the right
     {
       x = wallRightX - batWidth;
     }
@@ -43,9 +42,9 @@ class Bat
   {
     if (moveLeft == true)
     {
-      x -= xSpeed; 
+      x -= xSpeed;
     }
-    
+
     if (moveRight == true)
     {
       x += xSpeed;
@@ -70,6 +69,4 @@ class Bat
   {
     return (y + batHeight);
   }
-
-
 } // End of Bat class

@@ -71,6 +71,4 @@ class Brick_Manager
     }
     return collide;
   }
-  
-  
 } // end of class
