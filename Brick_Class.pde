@@ -1,12 +1,13 @@
 //    This is Class Brick.                                 
 //    It draws the brick and allows it to hit the ball.
 
+static int brickHeight = 25;
+
 class Brick
 {
-  float x;
-  float y;
-  int brickWidth;
-  int brickHeight;
+  float   x;
+  float   y;
+  int     brickWidth;
     
   // This is the constructer to build the brick
   Brick()
@@ -14,7 +15,6 @@ class Brick
     x               = 100;
     y               = 200;
     brickWidth      = 150;
-    brickHeight     = 25;
   }
   
   void draw()
@@ -22,11 +22,11 @@ class Brick
     rect(x, y, brickWidth, brickHeight);
   }
   
-  void setBrickPosition(float xPos, float yPos, int w, int h)
+  void setBrickPosition(float xPos, float yPos, int w)
   {
     x = xPos;
     y = yPos;
     brickWidth = w;
-    brickHeight = h;
   }
-}
+  
+} //end of class

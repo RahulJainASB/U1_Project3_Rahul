@@ -1,3 +1,6 @@
+//    This is Class Brick_Line                                 
+//    It contains all the bricks in a line and allows it to hit the ball.
+
 class Brick_Line
 {
   Brick[]         bricks;
@@ -8,7 +11,7 @@ class Brick_Line
   int            rColor, gColor, bColor;
 
     
-  // This is the constructer to build the brick
+  // This is the constructer to build the brick line
   Brick_Line()
   {
     maxNumberOfBricks  = 20;
@@ -27,20 +30,17 @@ class Brick_Line
 
   void draw()
   {
-    //float brickColor = random(10,200);
-    //fill(brickColor);
-    fill(rColor, gColor, bColor);
+    fill(rColor, gColor, bColor);              // Set the color for the bricks in this brickLine
     for (int i = 0; i < maxNumberOfBricks; i++)
     {
       bricks[i].draw();
     }
-    amIVisible = true;
+    amIVisible = true;                        // Set the visibility flag of this brickLine
   }
  
   
   void setPosition(float xPos, float yPos)
   {
-    println("Inside setPosition");
     x = xPos;
     y = yPos;
     setBricksPositions();
@@ -49,20 +49,14 @@ class Brick_Line
   
   void setBricksPositions()
   {    
-    float brickY = y;
-    int brickWidth = frame.getFrameWidth()/maxNumberOfBricks;
-    int brickHeight = 30;
-
+    float brickY     = y;
+    int brickWidth   = frame.getFrameWidth()/maxNumberOfBricks;
 
     for( int i = 0; i < bricks.length; i++)
     {
-      float brickX =  x + (i*brickWidth) + 2;
-      println(brickX);
-      
-      println("Brick# ", i, " X = ", brickX, " Y = ", brickY, " width=  ", brickWidth, " height=", brickHeight);
-
-      
-      bricks[i].setBrickPosition(brickX, brickY, brickWidth, brickHeight);
+      float brickX =  x + (i*brickWidth) + 2;      
+      //println("Brick# ", i, " X = ", brickX, " Y = ", brickY, " width=  ", brickWidth, " height=", brickHeight);
+      bricks[i].setBrickPosition(brickX, brickY, brickWidth);
     }
   }
   
@@ -72,4 +66,6 @@ class Brick_Line
     gColor = g;
     bColor = b;
   }
-}
+  
+  
+} // End of class

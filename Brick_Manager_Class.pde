@@ -4,7 +4,7 @@ class Brick_Manager
   Brick_Line[]    brickLine;
 
 
-  // This is the constructer to build the brick
+  // This is the constructer to build all the Bricks
   Brick_Manager()
   {
     maxNumberOfBrickLines = 5;
@@ -28,23 +28,14 @@ class Brick_Manager
 
   void setBrickLinesPositions()
   {
-      float  brickLineX = frame.getFrameX();
-      float frameY     = frame.getFrameY();
-      float brickLineY = frameY;
-  
-      println(brickLineX);
-      println(brickLineY);
-      println(frame.getFrameWidth());
-      println(frame.getFrameHeight());
-      println("Number of brick lines: ", brickLine.length);
-      
+      float  brickLineX  = frame.getFrameX();
+      float frameY       = frame.getFrameY();
+      float brickLineY   = frameY;
+        
       for (int i = 0; i < brickLine.length; i++)
       {
-        brickLineY = frameY + (i * 30);
-        println("BrickLine #: ", i, "  X = ", brickLineX, " Y = ", brickLineY);
-       brickLine[i].setPosition(brickLineX,  brickLineY); // This programm is stoping at this line.
-   //    brickline.setPosition(brickLineX,  brickLineY); // This programm is stoping at this line.
-  
+        brickLineY = frameY + (i * brickHeight);
+        brickLine[i].setPosition(brickLineX,  brickLineY); // This programm is stoping at this line.
       }
   }
   
@@ -61,75 +52,4 @@ class Brick_Manager
     }
   }
 
-}
-
-
-
-
-
-
-
-
-/***********
-
-class Brick_Manager
-{
-//  int             numberOfBrickLines;
-  int             maxNumberOfBrickLines;
- Brick_Line[]    brickLine;
-
-
-  // This is the constructer to build the brick
-  Brick_Manager()
-  {
-    //numberOfBrickLines = 1;
-    maxNumberOfBrickLines = 1; //5;
-    brickLine = new Brick_Line[1];//maxNumberOfBrickLines];
- }
-  
-  void initialize()
-  {
-    
-     for (int i = 0; i < maxNumberOfBrickLines; i++)
-    {
-     brickLine[i].initialize();
-    }
-
-    // Set up x and y position of each brick line
-    setBrickLinePosition();
-  }
-
-  void draw()
-  {
-    for (int i = 0; i < maxNumberOfBrickLines; i++)
-    {
-     // brickLine[i].draw();
-    }
-  }
-
-
-void setBrickLinePosition()
-{
-    float  brickLineX = frame.getFrameX() + 10;
-    
-    float frameY     = frame.getFrameY();
-    float brickLineY = frameY;
-
-    println(brickLineX);
-    println(brickLineY);
-    println(frame.getFrameWidth());
-    println(frame.getFrameHeight());
-    
-    for (int i = 0; i < maxNumberOfBrickLines; i++)
-    {
-      brickLineY = frameY + (i * 100);
-      println("BrickLine #: ", i, "  X = ", brickLineX, " Y = ", brickLineY);
-     brickLine[i].setPosition(brickLineX,  brickLineY); // This programm is stoping at this line.
- //    brickline.setPosition(brickLineX,  brickLineY); // This programm is stoping at this line.
-
-    }
-}
-
-}
-
-**************/
+} // end of class
