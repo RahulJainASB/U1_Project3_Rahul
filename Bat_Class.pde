@@ -44,16 +44,23 @@ class Bat
     //println (batX,"     ", batY,"     ", batWidth,"     ", batHeight);
   }
 
-  float getLeftX()
+  float getTopLeftX()
   {
     return x;
   }
-  float getRightX()
-  {
-    return (x + batWidth);
-  }
-  float getY()
+  float getTopLeftY()
   {
     return y;
   }
+  float getBottomRightX()
+  {
+    return (x + batWidth);
+  }
+
+  float getBottomRightY()
+  {
+    return (y + batHeight);
+  }
+
+
 } // End of Bat class

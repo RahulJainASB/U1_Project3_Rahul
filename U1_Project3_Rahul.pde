@@ -72,7 +72,7 @@ float pointLineDistance( float x1, float y1, float x2, float y2, float x0, float
   {
     float a1 = (x2 - x1) * (y1 - y0);
     float a2 = (x1 - x0) * (y2 - y1);
-    float b1 = ((x2-x1)*(x2-x1)) + ((y2-y1)*(y2-y1))
+    float b1 = ((x2-x1)*(x2-x1)) + ((y2-y1)*(y2-y1));
     d = abs(a1 - a2) / sqrt(b1);
   }
   
