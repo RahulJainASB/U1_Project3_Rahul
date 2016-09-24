@@ -41,13 +41,21 @@ class Frame
     return frameHeight;
   }
 
-  float getFrameX()
+  float getLeftX()
   {
     return x;
   }
-  float getFrameY()
+  float getRightX()
+  {
+    return x+frameWidth;
+  }
+  float getTopY()
   {
     return y;
+  }
+    float getBottomY()
+  {
+    return y + frameHeight;
   }
   
 }

@@ -3,11 +3,11 @@ Bat bat;
 Player player;
 Brick_Manager brickManager;
 Ball ball;
+Collision_Checker collisionChecker;
 
 void setup()
 {
   fullScreen();
-  background(124);
   
  frame = new Frame();
  frame.initialize();
@@ -17,15 +17,20 @@ void setup()
   ball = new Ball();
 
   brickManager = new Brick_Manager();
+  collisionChecker = new Collision_Checker();
 }
 
 void draw() 
 {
+  background(124);
   frame.draw();
   bat.draw();
   player.draw();
   brickManager.draw();
   ball.draw();
+  
+  ball.move();
+  collisionChecker.check();
 }
 
 
@@ -46,4 +51,9 @@ void keyPressed()
     //  showInstructions = false;        // This is set to false so that instructions are not showed again
   }
   
+}
+
+void resetGame()
+{
+  ball.restart();
 }

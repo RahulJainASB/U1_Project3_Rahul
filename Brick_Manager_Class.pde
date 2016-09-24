@@ -28,8 +28,8 @@ class Brick_Manager
 
   void setBrickLinesPositions()
   {
-      float  brickLineX  = frame.getFrameX();
-      float frameY       = frame.getFrameY();
+      float  brickLineX  = frame.getLeftX();
+      float frameY       = frame.getTopY();
       float brickLineY   = frameY;
         
       for (int i = 0; i < brickLine.length; i++)
