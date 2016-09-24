@@ -52,12 +52,12 @@ class Brick_Manager
   {
     for (int i = 0; i < brickLine.length; i++)
     {
-      if( i == 0)          brickLine[i].setColor(255);
-      else if( i == 1)     brickLine[i].setColor(225);
-      else if( i == 2)     brickLine[i].setColor(200);
-      else if( i == 3)     brickLine[i].setColor(175);
-      else if( i == 4)     brickLine[i].setColor(150);
-      else                 brickLine[i].setColor(125);
+      if( i == 0)          brickLine[i].setColor(255,  0,   0);
+      else if( i == 1)     brickLine[i].setColor(246, 31, 160);
+      else if( i == 2)     brickLine[i].setColor(295, 95, 227);
+      else if( i == 3)     brickLine[i].setColor(122, 186, 221);
+      else if( i == 4)     brickLine[i].setColor(170, 210, 170);
+      else                 brickLine[i].setColor(114, 168, 224);
     }
   }
 

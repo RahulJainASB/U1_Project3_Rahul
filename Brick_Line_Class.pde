@@ -5,17 +5,17 @@ class Brick_Line
   boolean         amIVisible;
   float           x;
   float           y;
-  int            bricksColor;
+  int            rColor, gColor, bColor;
 
     
   // This is the constructer to build the brick
   Brick_Line()
   {
-    maxNumberOfBricks  = 30;
+    maxNumberOfBricks  = 20;
     amIVisible         = false;
     x                  = 100;
     y                  = 200;
-    bricksColor        = 150;              
+    rColor = gColor = bColor = 150;              
     
     bricks             = new Brick[maxNumberOfBricks];
     for( int i = 0; i < bricks.length; i++)
@@ -29,7 +29,7 @@ class Brick_Line
   {
     //float brickColor = random(10,200);
     //fill(brickColor);
-    fill(bricksColor);
+    fill(rColor, gColor, bColor);
     for (int i = 0; i < maxNumberOfBricks; i++)
     {
       bricks[i].draw();
@@ -66,8 +66,10 @@ class Brick_Line
     }
   }
   
-  void setColor(int c)
+  void setColor(int r, int g, int b)
   {
-    bricksColor = c;
+    rColor = r;
+    gColor = g;
+    bColor = b;
   }
 }
