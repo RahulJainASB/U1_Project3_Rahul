@@ -12,11 +12,13 @@ class Collision_Checker
     {
       collide = true;
       //Change ball direction
-    } else if ( checkBatCollision() == true)
+    }
+    else if ( CheckBrickCollision() == true)
     {
       collide = true;
       // Change ball direction
-    } else if ( CheckBrickCollision() == true)
+    }
+    else if ( checkBatCollision() == true)
     {
       collide = true;
       // Change ball direction
@@ -56,6 +58,16 @@ class Collision_Checker
     return collide;
   }
 
+boolean CheckBrickCollision()
+  {
+     boolean collide = false;
+     
+     collide = brickManager.checkBallCollision();
+
+    return collide;
+
+  }
+
   boolean checkBatCollision()
   {
 
@@ -92,8 +104,5 @@ class Collision_Checker
   }
   
   
-  boolean CheckBrickCollision()
-  {
-    return false;
-  }
+  
 }

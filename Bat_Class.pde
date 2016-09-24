@@ -12,11 +12,11 @@ class Bat
   // This is the constructer to build the bat
   Bat()
   {
-    x          = 500;
-    y          = 800;
-    xSpeed     = 50;
-    batWidth      = 150;
-    batHeight     = 25;
+    batHeight   = 25;
+    x           = 500;
+    y           = frame.getBottomY() - batHeight + 2;
+    xSpeed      = 50;
+    batWidth    = 150;
   }
 
   void draw()
