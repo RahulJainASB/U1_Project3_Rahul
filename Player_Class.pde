@@ -1,5 +1,5 @@
 //    This is Class Player.                                 
-//    It draws the player and allows it to hit the ball.
+//    It keeps the player score, lives remaining and level.
 
 class Player
 {
@@ -25,8 +25,8 @@ class Player
     text (level, width-230, 25);
     text("Score: ", width-280, 50);
     text (score, width-230, 50);
-    text("Lives: ", width-280, 75);
-    text (lives, width-230, 75);
+    //text("Lives: ", width-280, 75);
+   // text (lives, width-230, 75);
   }
 
 }

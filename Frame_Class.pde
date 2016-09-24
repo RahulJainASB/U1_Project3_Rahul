@@ -1,4 +1,4 @@
-//    This is Class Frame.                                 
+//    This is class Frame.                                 
 //    It draws the frame and allows it to hit the ball.
 
 class Frame

@@ -1,5 +1,5 @@
-//    This is Class Ball.                                 
-//    It draws the ball and allows it to move and collide.
+//    This is class Ball.                                 
+//    It draws and moves the ball.
 
 class Ball
 {
@@ -29,23 +29,11 @@ class Ball
     ellipse(x, y, r, r);
   }
   
+    // Move the ball
     void move()
   {
     x += xSpeed * xDirection;
     y += ySpeed * yDirection;
-    
-    /*
-    if ((x > width - r) || (x < r))
-     {
-       xDirection = -xDirection;
-     }
-     
-     
-    if ((y > height - r) || (y < r))
-    {
-      yDirection = -yDirection;
-    }
-    */
   }
   
  float getX()
@@ -61,6 +49,7 @@ class Ball
    return r;
  }
  
+ // Restart the ball position
  void restart()
  {
     x               = 500;
@@ -70,6 +59,7 @@ class Ball
  }
  
  
+ // Calculates the intersection of a rectangle with this ball
  int rectCollision(float x1, float y1, float x2, float y2)
   {
     if( (x < (x1 - r)) || 

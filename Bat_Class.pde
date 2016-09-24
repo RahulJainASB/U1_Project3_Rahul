@@ -1,13 +1,13 @@
-//    This is Class Bat.                                 
-//    It draws the bat and allows it to hit the ball.
+//    This is class Bat.                                 
+//    It draws the bat and allows it to move to hit the ball.
 
 class Bat
 {
   float x;
   float y;
-  int xSpeed;
-  int batWidth;
-  int batHeight;
+  int   xSpeed;
+  int   batWidth;
+  int   batHeight;
 
   // This is the constructer to build the bat
   Bat()
@@ -34,15 +34,17 @@ class Bat
   // Moves the bat left of right depending on the arrow
   void move(boolean moveLeft, boolean moveRight) // move bat left or right
   {
-    if (moveLeft == true)  x -= xSpeed; 
-    if (moveRight == true) x += xSpeed;
+    if (moveLeft == true)
+    {
+      x -= xSpeed; 
+    }
+    
+    if (moveRight == true)
+    {
+      x += xSpeed;
+    }
   }
 
-  // print data to debug
-  void printYourself()
-  {
-    //println (batX,"     ", batY,"     ", batWidth,"     ", batHeight);
-  }
 
   float getTopLeftX()
   {

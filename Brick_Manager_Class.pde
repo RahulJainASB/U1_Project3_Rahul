@@ -1,3 +1,6 @@
+// This is class Brick_Manager.
+// It creates all the brick lines, draws them and checks if the ball hits any brick lines.
+
 class Brick_Manager
 {
   int             maxNumberOfBrickLines;

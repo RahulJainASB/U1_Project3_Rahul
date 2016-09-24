@@ -1,5 +1,5 @@
-//    This is Class Brick.                                 
-//    It draws the brick and allows it to hit the ball.
+//    This is class Brick.                                 
+//    It draws the brick and checks if the ball has hit a brick.
 
 static int brickHeight = 25;
 
@@ -57,49 +57,27 @@ class Brick
     else if( sideCollided == 1 )
     {
       ball.xDirection = -ball.xDirection;
-      println("Left of brick");
     }
     else if( sideCollided == 2 )
     {
       ball.yDirection = -ball.yDirection;
-      println("Top of brick");
     }
     else if( sideCollided == 3 )
     {
       ball.xDirection = -ball.xDirection;
-      println("Right of brick");
     }
     else if( sideCollided == 4 )
     {
       ball.yDirection = -ball.yDirection;
-      println("Bottom of brick");
     }
     
       collide = true;
-      counter--;
-      player.score++;    
-
-    
-    
-/*****    
-    if ( (abs(x - ballX) > r) || (abs( ballX - (x + brickWidth)) > r) || (abs(y - ballY) > r) || (abs( ballY - (y + brickHeight)) > r) )
-    {
-      collide = false;
-    }
-    else
-    {
-      println ("Ball collided with me");
-      collide = true;
-      counter--;
-      player.score++;
-    }
-    
-    ****/
-    
-    
+      counter--;        // this brick has been hit. Count the hit.
+      player.score++;   // Increment player score.  
     return collide;
   }
 
+// Returns true if this brick is visible, if not, false
   boolean amIVisible()
   {
     if ( counter == 0 )

@@ -1,9 +1,13 @@
+// This is class Collision_Checker
+// It checks if the ball collides with the bat, bricks or any of the walls
+
 class Collision_Checker
 {
   Collision_Checker()
   {
   }
 
+  // Checks if the ball collides with the bat, bricks or any of the walls
   boolean check()
   {
     boolean collide = false;
@@ -11,17 +15,14 @@ class Collision_Checker
     if ( checkWallCollisions() == true)
     {
       collide = true;
-      println("Collided with wall");
     }
     else if ( CheckBrickCollision() == true)
     {
       collide = true;
-      println("Collided with brick");
     }
     else if ( checkBatCollision() == true)
     {
       collide = true;
-      println("Collided with bat");
     }
     return collide;
   }
@@ -84,50 +85,26 @@ boolean CheckBrickCollision()
     else if( sideCollided == 1 )
     {
       ball.xDirection = -ball.xDirection;
-      println("Left of bat");
+      //println("Left of bat");
     }
     else if( sideCollided == 2 )
     {
       ball.yDirection = -ball.yDirection;
-      println("Top of bat");
+      //println("Top of bat");
     }
     else if( sideCollided == 3 )
     {
       ball.xDirection = -ball.xDirection;
-      println("Right of bat");
+      //println("Right of bat");
     }
     else if( sideCollided == 4 )
     {
       ball.yDirection = -ball.yDirection;
-      println("Bottom of bat");
+      //println("Bottom of bat");
     }
     return true;
-    
-    /*********
-    if ( ballX < (batLeftX - r) ) // Ball is left of the bat
-    {
-      println("to left");
-      collide = false;
-    }
-    if ( ballX > (batRightX + r)) // Ball is right of the bat
-    {
-      println("to right");
-      collide = false;
-    }
-    else if ( ballY < (batY - r) ) // The ball is above the bat
-    {
-      collide = false;
-    }
-    else
-    {
-      println("bat hit");
-      ball.yDirection = -ball.yDirection;
-      collide = true;
-    }  
-    return collide;
-*********/
   }
   
   
   
-}
+} // end of class

@@ -1,5 +1,5 @@
-//    This is Class Brick_Line                                 
-//    It contains all the bricks in a line and allows it to hit the ball.
+//    This is class Brick_Line                                 
+//    It contains all the bricks in a line, draws the line and checks if the ball hits this line.
 
 class Brick_Line
 {
@@ -55,7 +55,6 @@ class Brick_Line
     for ( int i = 0; i < bricks.length; i++)
     {
       float brickX =  x + (i*brickWidth) + 2;      
-      //println("Brick# ", i, " X = ", brickX, " Y = ", brickY, " width=  ", brickWidth, " height=", brickHeight);
       bricks[i].setBrickPosition(brickX, brickY, brickWidth);
     }
   }
