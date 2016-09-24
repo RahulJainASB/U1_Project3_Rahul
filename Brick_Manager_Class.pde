@@ -48,7 +48,7 @@ class Brick_Manager
       else if ( i == 2)     brickLine[i].setColor(295, 95, 227);
       else if ( i == 3)     brickLine[i].setColor(122, 186, 221);
       else if ( i == 4)     brickLine[i].setColor(170, 210, 170);
-      else                 brickLine[i].setColor(114, 168, 224);
+      else                  brickLine[i].setColor(114, 168, 224);
     }
   }
 
@@ -59,7 +59,7 @@ class Brick_Manager
 
     for (int i = 0; i < brickLine.length; i++)
     {
-      if ( brickLine[i].amIVisible == true )
+      if ( brickLine[i].amIVisible == true )        // check BrickLine only if it is visible
       {
         collide = brickLine[i].checkBallCollision();
         if ( collide == true )                      // do not check with other brick lines if collided with this brick line. Can only collide with one at a time

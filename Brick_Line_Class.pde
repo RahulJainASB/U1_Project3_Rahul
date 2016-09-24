@@ -81,7 +81,8 @@ class Brick_Line
     if ( (abs(y - ballY) > r ) || ((abs( ballY - (y+brickHeight)) > r )) )
     {
       collide = false;
-    } else
+    }
+    else
     {
       for (int i = 0; i < bricks.length; i++)
       {
@@ -99,7 +100,7 @@ class Brick_Line
 
   void setBrickLineVisibility()
   {
-    if (amIVisible == true )
+    if (amIVisible == true )    // if brickLine is not visible, then don't check
     {
       amIVisible = false;
       for (int i = 0; i < bricks.length; i++)
@@ -112,4 +113,6 @@ class Brick_Line
       }
     }
   }
+  
+  
 } // End of class

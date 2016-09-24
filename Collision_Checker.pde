@@ -11,17 +11,17 @@ class Collision_Checker
     if ( checkWallCollisions() == true)
     {
       collide = true;
-      //Change ball direction
+      println("Collided with wall");
     }
     else if ( CheckBrickCollision() == true)
     {
       collide = true;
-      // Change ball direction
+      println("Collided with brick");
     }
     else if ( checkBatCollision() == true)
     {
       collide = true;
-      // Change ball direction
+      println("Collided with bat");
     }
     return collide;
   }
@@ -48,9 +48,7 @@ class Collision_Checker
       ball.yDirection = -ball.yDirection;
       collide = true;
     }
-    
-    
-    else if ( (ballY + r) > wallBottomY )  // checking collision with top wall
+    else if ( (wallBottomY - ballY) < r)  // checking collision with bottom wall i.e. the ball did not hit the bat and fell down
     {
       player.lives--;
       resetGame();
@@ -61,11 +59,8 @@ class Collision_Checker
 boolean CheckBrickCollision()
   {
      boolean collide = false;
-     
      collide = brickManager.checkBallCollision();
-
     return collide;
-
   }
 
   boolean checkBatCollision()

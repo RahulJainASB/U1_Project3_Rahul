@@ -47,6 +47,41 @@ class Brick
       return collide;
     }
     
+    
+    int sideCollided = ball.rectCollision( x, y,  (x+ brickWidth),  (y + brickHeight) );
+
+    if( sideCollided == 0 )
+    {
+      return false;
+    }
+    else if( sideCollided == 1 )
+    {
+      ball.xDirection = -ball.xDirection;
+      println("Left of brick");
+    }
+    else if( sideCollided == 2 )
+    {
+      ball.yDirection = -ball.yDirection;
+      println("Top of brick");
+    }
+    else if( sideCollided == 3 )
+    {
+      ball.xDirection = -ball.xDirection;
+      println("Right of brick");
+    }
+    else if( sideCollided == 4 )
+    {
+      ball.yDirection = -ball.yDirection;
+      println("Bottom of brick");
+    }
+    
+      collide = true;
+      counter--;
+      player.score++;    
+
+    
+    
+/*****    
     if ( (abs(x - ballX) > r) || (abs( ballX - (x + brickWidth)) > r) || (abs(y - ballY) > r) || (abs( ballY - (y + brickHeight)) > r) )
     {
       collide = false;
@@ -58,14 +93,24 @@ class Brick
       counter--;
       player.score++;
     }
+    
+    ****/
+    
+    
     return collide;
   }
 
   boolean amIVisible()
   {
     if ( counter == 0 )
+    {
       return false;
+    }
     else 
-    return true;
+    {
+      return true;
+    }
   }
+  
+  
 } //end of class
