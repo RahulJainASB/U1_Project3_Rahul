@@ -2,7 +2,7 @@ Frame frame;
 Bat bat;
 Player player;
 Brick_Manager brickManager;
-
+Ball ball;
 
 void setup()
 {
@@ -14,6 +14,7 @@ void setup()
  
   bat = new Bat();
   player = new Player();
+  ball = new Ball();
 
   brickManager = new Brick_Manager();
 }
@@ -24,6 +25,7 @@ void draw()
   bat.draw();
   player.draw();
   brickManager.draw();
+  ball.draw();
 }
 
 
