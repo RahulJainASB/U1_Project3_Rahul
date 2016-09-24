@@ -16,8 +16,6 @@ void setup()
   player = new Player();
 
   brickManager = new Brick_Manager();
-  brickManager.initialize();
-
 }
 
 void draw() 
@@ -25,9 +23,7 @@ void draw()
   frame.draw();
   bat.draw();
   player.draw();
- // brickManager.draw();
-  
-  
+  brickManager.draw();
 }
 
 
