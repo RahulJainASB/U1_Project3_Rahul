@@ -22,10 +22,17 @@ class Bat
   void draw()
   {
     // Check if bat is off the screen before drawing
-    if ( x > (width - (batWidth/2)) ) // If bat is too far to the right, move it in
-      x = batWidth/4;
-    else if ( x < batWidth/5 )        // If bat is too far to the left, move it in
-      x = width - batWidth/2;
+    float wallLeftX     = frame.getLeftX();
+    float wallRightX    = frame.getRightX(); 
+    
+    if (  (wallRightX - x) < (batWidth/5) )   // Bat is too far to the right, move it to left side
+    {
+      x = wallLeftX;
+    }
+    else if( ((x + batWidth) - wallLeftX) < (batWidth/5) )  // Bat is too far to the left side, move it to the right
+    {
+      x = wallRightX - batWidth;
+    }
 
     fill(255);
     rect(x, y, batWidth, batHeight);
